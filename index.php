@@ -31,20 +31,26 @@ include __DIR__.'/DataBase/db.php';
     <main class="py-5">
         <div class="container border border-secondary">
             <div class="row">
-                <div class="col-2"<?php foreach($products as $item): ?>>
+
+                <div class="col d-flex"<?php foreach($products as $item): ?>>
 
                     <div class="card">
-                        <img src="<?php echo $item->img?>" class="card-img-top _myimg" alt="...">
+                        <div class="container-fluid">
+                            <img src="<?php echo $item->img?>" class="card-img-top d-block" alt="...">
+                        </div>
                         <div class="card-body">
                             <h5 class="card-title"> <?php echo $item->name?> </h5>
                             <p class="card-text"> <?php echo $item->type?> </p>
-                            <a href="#" class="btn btn-primary"> <?php echo $item->price?> </a>
+                            <a href="#" class="btn btn-primary"> <?php echo $item->price?></a>
                         </div>
-                    </div>
-
+                    </div <?php endforeach; ?>>
+                    
+                    
                 </div>
-                <?php endforeach; ?>
+                
+                
             </div>
+
         </div>
     </main>
     
