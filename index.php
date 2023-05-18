@@ -1,7 +1,6 @@
 <?php
 
 include __DIR__.'/DataBase/db.php';
-use Sconto;
 
 ?>
 
@@ -43,7 +42,6 @@ use Sconto;
                             <h5 class="card-title"> <?php echo $item->name?> </h5>
                             <p class="card-text"> <?php echo $item->type?> </p>
                             <a href="#" class="btn btn-primary"> <?php echo $item->price?></a>
-                            <div><?php echo $item->getSconto();?></div>
                         </div>
                     </div <?php endforeach; ?>>
                     

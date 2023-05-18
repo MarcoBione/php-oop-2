@@ -10,6 +10,4 @@ trait Sconto {
         return 'nessuno sconto per te!';
         }
     }
-
-    public
 }
